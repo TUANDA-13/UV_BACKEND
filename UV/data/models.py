@@ -6,7 +6,7 @@ from django.utils import timezone
 
 class UV(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    id_esp = models.CharField(max_length=10, editable=True)
+    id_esp = models.CharField(max_length=100, editable=True)
     x = models.FloatField(max_length=None, editable=True, default=0)
     y = models.FloatField(max_length=None, editable=True, default=0)
     created_at = models.DateTimeField(default=timezone.now)
